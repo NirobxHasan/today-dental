@@ -1,0 +1,16 @@
+.login-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forget-btn,
+.islogin-btn {
+    border: 0;
+    background-color: white;
+    display: flex;
+    justify-content: right;
+    color: #5a727e;
+}

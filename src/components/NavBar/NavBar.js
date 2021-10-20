@@ -1,8 +1,10 @@
-import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import './NavBar.css'
+import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
+import './NavBar.css';
 const NavBar = () => {
+    const { user, logOut } = useFirebase();
     return (
         <div>
             <Navbar
@@ -27,14 +29,18 @@ const NavBar = () => {
                             <Nav.Link href="#pricing">About us</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">Login</Nav.Link>
-                            <Nav.Link href="#deets">Register</Nav.Link>
+                            <Nav.Link as={Link} to="/login">
+                                {user ? '' : 'Login/Regiser'}
+                            </Nav.Link>
+                            <Nav.Link onClick={logOut}>
+                                {user ? 'Logout' : ''}
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
         </div>
-    )
-}
+    );
+};
 
-export default NavBar
+export default NavBar;

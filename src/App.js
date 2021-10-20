@@ -5,6 +5,7 @@ import Serivces from './components/Services/Serivces';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+import Login from './components/Login/Login';
 function App() {
     return (
         <div>
@@ -22,6 +23,9 @@ function App() {
                     </Route>
                     <Route path="/service/:id">
                         <ServiceDetails />
+                    </Route>
+                    <Route path="/login">
+                        <Login />
                     </Route>
                 </Switch>
             </Router>

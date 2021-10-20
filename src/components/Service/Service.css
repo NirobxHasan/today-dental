@@ -1,0 +1,13 @@
+.link-btn {
+    width: 100%;
+    background-color: #85a6b6;
+    padding: 5px 0;
+    display: flex;
+    text-decoration: none;
+}
+.link-btn button {
+    border: 0;
+    background-color: #85a6b6;
+    color: white;
+    font-weight: bold;
+}
