@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "service_name": "Scaling and polishing",
+        "img": "https://i.ibb.co/4tRmvgQ/01.jpg",
+        "description": "Dental scaling and polishing is the removal of plaque and tartar deposits built up on the teeth and the polishing of the smooth surfaces of the teeth. This procedure is conducted during routine cleaning (prophylaxis) at a visit to the dentist. Dental scaling and polishing are procedures that take place during a regular visit to the dentist for prophylaxis. Scaling is a non-surgical procedure of removing dental plaque and calculus on the teeth. A slow speed hand tool polishes teeth to make them shiny and smooth. These procedures are useful for anyone but particularly useful to those with periodontal disease."
+    },
+    {
+        "id": "2",
+        "service_name": "Tooth color restoration",
+        "img": "https://i.ibb.co/m4d7FD4/02.jpg",
+        "description": "Tooth colored fillings, also called white fillings, are dental fillings that restore and mimic the natural appearance of tooth structure. In addition to restoring teeth that have fractured or decayed, tooth colored fillings may also be used cosmetically to change the size, color and shape of teeth. This quality is particularly useful in closing gaps between teeth; repairing chipped teeth and making teeth appear to be more straight or even."
+    },
+    {
+        "id": "3",
+        "service_name": "Root canal",
+        "img": "https://i.ibb.co/1fR9fdc/03.jpg",
+        "description": "Root canal treatment is designed to eliminate bacteria from the infected root canal, prevent reinfection of the tooth and save the natural tooth. When one undergoes a root canal, the inflamed or infected pulp is removed and the inside of the tooth is carefully cleaned and disinfected, then filled and sealed."
+    },
+    {
+        "id": "4",
+        "service_name": "Teeth whitening",
+        "img": "https://i.ibb.co/k2Pvx14/04.jpg",
+        "description": "Everyone notices a bright, white, glowing smile. And everyone notices how confident you feel when you have that beautiful smile. That’s why we utilize long-lasting Teeth Whitening procedure — because we want you to glow with pride and confidence.With professional Teeth Whitening treatment, you can enjoy the boost in confidence of a bright, white smile. At LASER DENTAL, we trust the best Teeth Whitening Opalescence BOOST system for best long lasting results. At your Initial appointment, Dr. Shihabur Rahman will discuss about Teeth Whitening treatment. He will also note down your expectations. Now you can get the glamorous smile you have always wanted."
+    },
+    {
+        "id": "5",
+        "service_name": "Full mouth rehabilitation",
+        "img": "https://i.ibb.co/CsbhPcx/05.jpg",
+        "description": "It might sound like a complicated procedure, but full mouth rehabilitation merely means combining restorative dental treatments to fix or rebuild your smile. Our goal is to not only help you enjoy smiling again, but also to strengthen and fortify your healthy oral tissues and tooth structures, as well. The exact treatments that make up your full mouth reconstruction will depend on the specific issues that affect your smile. During your consultation, we will thoroughly discuss your dental issues, and what combination of treatments can rebuild your smile in a conservative, minimally-invasive way."
+    },
+    {
+        "id": "6",
+        "service_name": "Dental implants",
+        "img": "https://i.ibb.co/B22tw75/06.jpg",
+        "description": "Dental implants as we know them today were invented in 1952 by a Swedish orthopedic surgeon named Per-Ingvar Brånemark. Today, they are considered the standard of care for prosthetic replacement of missing teeth in dentistry. A dental implant is a surgical fixture that is placed into the jawbone and allowed to fuse with the bone over the span of a few months. The dental implant acts as a replacement for the root of a missing tooth. In turn, this \"artificial tooth root\" serves to hold a replacement tooth or bridge. Having a dental implant fused to the jawbone is the closest thing to mimicking a natural tooth because it stands on its own without affecting the nearby teeth and has great stability. The process of fusion between the dental implant and jawbone is called \"osseointegration.\" Most dental implants are made of titanium, which allows them to integrate with bone without being recognized as a foreign object in our body. Over time, technology and science have progressed to greatly improve the outcomes of dental implant placement. Today, the success rate for dental implants is close to 98%."
+    },
+    {
+        "id": "7",
+        "service_name": "Implant over denture",
+        "img": "https://i.ibb.co/3cMzPk0/07.jpg",
+        "description": "Implant supported dentures are special types of prostheses which depend upon dental implants for their retention and stability. The best thing about implant supported dentures is that they combine both the qualities of dental implants and removable dentures. Unlike the conventional removable dentures, implant supported dentures derive their support from dental implants which are firmly embedded within the jaw bone.  If you are not happy with your conventional dentures because they do not fit properly or they slip when you are speaking, then implant supported dentures are an ideal option for you. This is because the implants provide a sound foundation for the dentures, thereby improving your chewing and speech efficiency. However, for having your teeth replaced with an implant supported prosthesis, you must have sufficient density and thickness of the residual jaw bone available, so that it can hold the implants firmly in place."
+    },
+    {
+        "id": "8",
+        "service_name": "Dental CT Scan",
+        "img": "https://i.ibb.co/VN3VdbT/08.jpg",
+        "description": "Dental cone beam computed tomography (CT) is a special type of x-ray equipment used when regular dental or facial x-rays are not sufficient. Your doctor may use this technology to produce three dimensional (3-D) images of your teeth, soft tissues, nerve pathways and bone in a single scan. This procedure requires little to no special preparation. Tell your doctor if theres possibility you are pregnant. Wear loose, comfortable clothing and leave jewelry at home. You may be asked to wear a gown."
+    },
+    {
+        "id": "9",
+        "service_name": "Dental crown and bridges",
+        "img": "https://i.ibb.co/Tg9SGp9/09.jpg",
+        "description": "A dental crown can cap an individuals damaged or decaying tooth or be placed on top of a dental implant to replace a missing tooth. Dental implants are metal fixtures, surgically fastened to your jawbone below the gums. These metal implants become anchored to your bone through osseointegration (the bone fuses to the metal). This process provides stable support you can rely on while eating and speaking. According to the Cleveland Clinic, the healing process after getting an implant can take 6-12 weeks. Your dental professional will then place a metal post (or abutment) into your implant, onto which they will mount your crown. Bridges, on the other hand, are solely used to replace missing teeth. They have two crowns – one on either end – and a bridge of replacement teeth that rest in the area of the gums where there is tooth loss. The crowns at the ends of a bridge can fuse to existing teeth (that need to be filed down by a dental professional to fit correctly), or your dental professional can attach them to dental implants."
+    }
+]

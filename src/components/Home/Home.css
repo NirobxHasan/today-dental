@@ -1,0 +1,13 @@
+.caro-img {
+    height: 90vh;
+}
+@media only screen and (max-width: 688px) {
+    .caro-img {
+        height: 40vh;
+    }
+}
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .caro-img {
+        height: 60vh;
+    }
+}
