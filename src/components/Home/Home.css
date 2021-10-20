@@ -1,6 +1,50 @@
 .caro-img {
     height: 90vh;
 }
+.head-txt {
+    color: rgb(72, 106, 136);
+}
+
+.carosel-item {
+    height: 100vh;
+}
+
+.icon {
+    color: white;
+    width: 100px;
+    margin: 10px;
+    margin-bottom: 100px;
+}
+.card {
+    width: 350px;
+    height: 280px;
+    border-radius: 10px;
+    border: 0;
+}
+
+.card1,
+.card2,
+.card3 {
+    background-color: rgb(72, 106, 136);
+}
+
+.teachers-text {
+    text-align: end;
+}
+
+.doctors-container {
+    margin: 20px;
+}
+.doct-section {
+    margin-top: 100px;
+}
+@media only screen and (max-width: 992px) {
+    .card {
+        width: 250px;
+        height: 280px;
+        border-radius: 10px;
+    }
+}
 @media only screen and (max-width: 688px) {
     .caro-img {
         height: 40vh;
