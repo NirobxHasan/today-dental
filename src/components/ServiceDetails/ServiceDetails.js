@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Button, Row, Col } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import useServices from '../../hooks/useServices';
-
+import './ServiceDetails.css';
 const ServiceDetails = () => {
     const { id } = useParams();
 
@@ -14,16 +14,18 @@ const ServiceDetails = () => {
     }, [services]);
 
     return (
-        <div className="container mt-5">
-            <Card style={{ width: '50rem' }} className="mx-auto mt-2">
-                <Card.Img variant="top" src={service?.img} />
-                <Card.Body>
-                    <Card.Text>
-                        <h1>{service?.service_name}</h1>
-                        <p>{service?.description}</p>
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+        <div className="container my-5 details">
+            <Container>
+                <Card style={{ width: '50rem' }} className="mx-auto mt-5">
+                    <Card.Img variant="top" src={service?.img} />
+                    <Card.Body>
+                        <Card.Text>
+                            <h1>{service?.service_name}</h1>
+                            <p>{service?.description}</p>
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </Container>
         </div>
     );
 };

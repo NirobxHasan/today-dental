@@ -52,7 +52,7 @@ const Home = () => {
                     lg={3}
                     className="g-4 d-flex justify-content-center"
                 >
-                    <Col className="card card1 m-2 p-3 text-light">
+                    <Col className="card-common card1 m-2 p-3 text-light">
                         <FontAwesomeIcon
                             className="icon fa-4x"
                             icon={faSwatchbook}
@@ -60,7 +60,7 @@ const Home = () => {
                         <h4>10</h4>
                         <h6>Services</h6>
                     </Col>
-                    <Col className="card card2 m-2 p-3 text-light">
+                    <Col className="card-common card2 m-2 p-3 text-light">
                         <FontAwesomeIcon
                             className="icon fa-4x"
                             icon={faCheckCircle}
@@ -68,7 +68,7 @@ const Home = () => {
                         <h4>Lifetime </h4>
                         <h6>access prescription</h6>
                     </Col>
-                    <Col className="card card3 m-2 p-3 text-light">
+                    <Col className="card-common card3 m-2 p-3 text-light">
                         <FontAwesomeIcon
                             className="icon fa-4x"
                             icon={faHeadset}
