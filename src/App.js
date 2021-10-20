@@ -8,6 +8,10 @@ import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Footer from './components/Footer/Footer';
+import About from './components/About/About';
+import Doctors from './components/Doctors/Doctors';
 
 function App() {
     return (
@@ -25,8 +29,15 @@ function App() {
                         <Route path="/services">
                             <Serivces />
                         </Route>
-                        <Route path="/service/:id">
+                        <PrivateRoute path="/service/:id">
                             <ServiceDetails />
+                        </PrivateRoute>
+                        <Route path="/doctor">
+                            <Doctors />
+                        </Route>
+
+                        <Route path="/About">
+                            <About />
                         </Route>
                         <Route path="/login">
                             <Login />
@@ -35,6 +46,7 @@ function App() {
                             <NotFound />
                         </Route>
                     </Switch>
+                    <Footer />
                 </Router>
             </AuthProvider>
         </div>

@@ -6,6 +6,7 @@ import useFirebase from '../../hooks/useFirebase';
 import googleIcon from './../../images/icon/google.png';
 import facebookIcon from './../../images/icon/002-facebook.png';
 import useAuth from '../../hooks/useContext';
+import { useHistory, useLocation } from 'react-router';
 
 const Login = () => {
     const [isLogin, setIsLogin] = useState(true);
@@ -13,6 +14,10 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [error, setError] = useState('');
+    const history = useHistory();
+    const location = useLocation();
+    // after login redirect
+    const redirect_url = location.state?.from || '/home';
 
     const {
         user,
@@ -34,7 +39,9 @@ const Login = () => {
     };
 
     const handleGoogleLogin = () => {
-        signInWithGoogle();
+        signInWithGoogle().then(() => {
+            history.push(redirect_url);
+        });
     };
     const handleFacebookLogin = () => {
         signInWithFacebook();

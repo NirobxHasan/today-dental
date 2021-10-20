@@ -17,25 +17,20 @@ const useFirebase = () => {
     initializeAuthentication();
     const googleProvider = new GoogleAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
-    const [user, setUser] = useState('');
+    const [user, setUser] = useState({});
     const [errorFirebase, setFirebaseError] = useState('');
+
     const auth = getAuth();
 
     const signInWithGoogle = () => {
-        console.log('google');
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                setUser(result.user);
-            })
-            .catch((error) => {
-                const errorMessage = error.message;
-                setFirebaseError(errorMessage);
-            });
+        return signInWithPopup(auth, googleProvider);
     };
+
+    //facebook login
     const signInWithFacebook = () => {
         signInWithPopup(auth, facebookProvider)
             .then((result) => {
-                setUser(result.user);
+                // setUser(result.user);
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -47,7 +42,7 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
-                setUser(userCredential.user);
+                // setUser(userCredential.user);
                 verifyEmail();
                 setUserName(name);
                 // ...
@@ -81,7 +76,7 @@ const useFirebase = () => {
     const logOut = () => {
         signOut(auth)
             .then(() => {
-                setUser('');
+                setUser({});
             })
             .catch((error) => {
                 // An error happened.
