@@ -5,6 +5,7 @@ import './Login.css';
 import useFirebase from '../../hooks/useFirebase';
 import googleIcon from './../../images/icon/google.png';
 import facebookIcon from './../../images/icon/002-facebook.png';
+import useAuth from '../../hooks/useContext';
 
 const Login = () => {
     const [isLogin, setIsLogin] = useState(true);
@@ -22,7 +23,7 @@ const Login = () => {
         errorFirebase,
         setFirebaseError,
         resetPass
-    } = useFirebase();
+    } = useAuth();
 
     const handleLogin = () => {
         if (isLogin) {
