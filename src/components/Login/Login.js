@@ -3,22 +3,26 @@ import { Card, Form, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import './Login.css';
 import useFirebase from '../../hooks/useFirebase';
+import googleIcon from './../../images/icon/google.png';
+import facebookIcon from './../../images/icon/002-facebook.png';
 
 const Login = () => {
     const [isLogin, setIsLogin] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
     const [error, setError] = useState('');
 
     const {
         user,
-        signWithEmail,
+        signInWithGoogle,
+        signInWithFacebook,
+        regWithEmail,
         signInWithEmail,
         errorFirebase,
         setFirebaseError,
         resetPass
     } = useFirebase();
-    console.log(user);
 
     const handleLogin = () => {
         if (isLogin) {
@@ -26,6 +30,13 @@ const Login = () => {
         } else {
             setIsLogin(true);
         }
+    };
+
+    const handleGoogleLogin = () => {
+        signInWithGoogle();
+    };
+    const handleFacebookLogin = () => {
+        signInWithFacebook();
     };
 
     const handleRegistration = (e) => {
@@ -38,13 +49,20 @@ const Login = () => {
             setError('Ensure string is of length 8.');
             return;
         }
-        isLogin
-            ? signInWithEmail(email, password)
-            : signWithEmail(email, password);
+        if (isLogin) {
+            signInWithEmail(email, password);
+            console.log(user);
+        } else {
+            regWithEmail(name, email, password);
+        }
         setError('');
     };
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
+    };
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+        console.log(e.target.value);
     };
     const handlePasswordChange = (e) => {
         setFirebaseError('');
@@ -59,11 +77,24 @@ const Login = () => {
             <Card style={{ width: '30rem' }}>
                 <Card.Body>
                     <Card.Title>
-                        {isLogin ? 'Login' : 'Registration'}
+                        <h3>{isLogin ? 'Login' : 'Registration'}</h3>
                     </Card.Title>
-                    <p>{user?.displayName}</p>
                     <Card.Text>
                         <Form onSubmit={handleRegistration}>
+                            {!isLogin && (
+                                <Form.Group
+                                    className="mb-3"
+                                    controlId="formBasicEmail"
+                                >
+                                    <Form.Label>Name</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="Enter Name"
+                                        onBlur={handleNameChange}
+                                        required
+                                    />
+                                </Form.Group>
+                            )}
                             <Form.Group
                                 className="mb-3"
                                 controlId="formBasicEmail"
@@ -117,8 +148,25 @@ const Login = () => {
                             )}
                         </div>
                     </Card.Text>
-                    <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
+                    <div className="d-flex justify-content-center">
+                        <div>
+                            <h6>Login With</h6>
+                            <div className="d-flex">
+                                <button
+                                    className="social-icon"
+                                    onClick={handleGoogleLogin}
+                                >
+                                    <img src={googleIcon} alt="" />
+                                </button>
+                                <button
+                                    className="social-icon"
+                                    onClick={handleFacebookLogin}
+                                >
+                                    <img src={facebookIcon} alt="" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </Card.Body>
             </Card>
         </div>

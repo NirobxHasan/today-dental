@@ -6,7 +6,7 @@ import './NavBar.css';
 const NavBar = () => {
     const { user, logOut } = useFirebase();
     return (
-        <div>
+        <div className="nav-section">
             <Navbar
                 collapseOnSelect
                 expand="lg"
@@ -15,7 +15,7 @@ const NavBar = () => {
                 fixed="top"
             >
                 <Container>
-                    <Navbar.Brand href="#home">Today-Clinic</Navbar.Brand>
+                    <Navbar.Brand href="#home">Today-Dental</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">

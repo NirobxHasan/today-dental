@@ -6,22 +6,50 @@ import {
     signInWithEmailAndPassword,
     sendEmailVerification,
     sendPasswordResetEmail,
+    updateProfile,
+    signInWithPopup,
+    GoogleAuthProvider,
+    FacebookAuthProvider,
     signOut
 } from 'firebase/auth';
 import initializeAuthentication from '../Firebase/firebase.init';
 const useFirebase = () => {
     initializeAuthentication();
-
+    const googleProvider = new GoogleAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
     const [user, setUser] = useState('');
     const [errorFirebase, setFirebaseError] = useState('');
     const auth = getAuth();
 
-    const signWithEmail = (email, password) => {
+    const signInWithGoogle = () => {
+        console.log('google');
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                setUser(result.user);
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setFirebaseError(errorMessage);
+            });
+    };
+    const signInWithFacebook = () => {
+        signInWithPopup(auth, facebookProvider)
+            .then((result) => {
+                setUser(result.user);
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setFirebaseError(errorMessage);
+            });
+    };
+
+    const regWithEmail = (name, email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
                 setUser(userCredential.user);
                 verifyEmail();
+                setUserName(name);
                 // ...
             })
             .catch((error) => {
@@ -71,6 +99,17 @@ const useFirebase = () => {
                 // ..
             });
     };
+    const setUserName = (name) => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then((result) => {
+                // Profile updated!
+                // ...
+            })
+            .catch((error) => {
+                // An error occurred
+                // ...
+            });
+    };
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -83,10 +122,12 @@ const useFirebase = () => {
 
     return {
         user,
-        signWithEmail,
+        signInWithGoogle,
+        regWithEmail,
         signInWithEmail,
         errorFirebase,
         setFirebaseError,
+        signInWithFacebook,
         logOut,
         resetPass
     };

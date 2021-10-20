@@ -14,3 +14,7 @@
     justify-content: right;
     color: #5a727e;
 }
+.social-icon {
+    border: 0;
+    background-color: white;
+}
